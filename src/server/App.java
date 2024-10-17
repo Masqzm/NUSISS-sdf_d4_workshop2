@@ -3,9 +3,8 @@ package server;
 import java.io.*;
 import java.net.*;
 
-import client.Cookie;
-
 public class App {
+    // Run server cmd: java -cp classes server.App 3000 data cookie_file.txt
     public static void main(String[] args) throws FileNotFoundException, IOException {
         //int port = 12345;
         //String file = "cookie_file.txt";
@@ -29,7 +28,7 @@ public class App {
         }
 
         // Read and print cookies
-        Cookie c = new Cookie();
+        Cookies c = new Cookies();
         c.readCookieFile(dirPath + File.separator + fileName);
         
         // Init server
@@ -74,5 +73,7 @@ public class App {
         } catch (EOFException ex) {
             System.err.println(ex.toString());
         } 
+
+        ss.close();
     }
 }

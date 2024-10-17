@@ -4,6 +4,7 @@ import java.io.*;
 import java.net.*;
 
 public class ClientApp {
+    // Run client cmd: java -cp classes client.ClientApp 3000 
     public static void main(String[] args) throws IOException {
         String portNumber = "";
 
@@ -56,8 +57,8 @@ public class ClientApp {
 
             // Close socket
             s.close();
-        } catch(Exception ex) {
-
+        } catch(IOException ex) {
+            System.err.println(ex.toString());
         }
     }
 }

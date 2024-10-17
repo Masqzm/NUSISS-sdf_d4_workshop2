@@ -1,11 +1,11 @@
-package client;
+package server;
 
 import java.io.*;
 import java.util.List;
 import java.util.Random;
 import java.util.ArrayList;
 
-public class Cookie {
+public class Cookies {
     List<String> cookies = new ArrayList<>();
 
     public void readCookieFile(String dirPathFileName) throws IOException {
